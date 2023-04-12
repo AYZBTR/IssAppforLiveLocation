@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ISS Live Location Map</title>
+    
+    <link 
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css"
+      integrity="sha512-KJRB1wUfcipHY35z9dEE+Jqd+pGCuQ2JMZmQPAjwPjXuzz9oL1pZm2cd79vyUgHQxvb9sFQ6f05DIz0IqcG1Jw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      #map {
+        height: 300px;
+        width: 50%;
+        float: right;
+      }
+      footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 50px; /* Set the height of your footer */
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+      }
+/* Center the content of the footer */
+footer p {
+  margin: 15px auto 0;
+}
+.BD{
+  background-color: wheat;
+  background-image: url(https://cdn.pixabay.com/photo/2012/10/26/02/39/international-space-station-63128_960_720.jpg);
+  background-size: cover;
+}
+    </style> 
+  </head>
+  <body class="BD">
+    <h1 style="color:white;">ISS Live Location Map</h1>
+    <p style="font-size: large;color: white;">Latitude: {{ latitude }}</p>
+    <p style="font-size: large;color:white;">Longitude: {{ longitude }}</p>
+    <p style="font-size: large;color:white;"> The ISS, or International Space Station, orbits the Earth at an average speed of approximately 17,500 miles per hour (28,000 kilometers per hour) relative to the Earth's surface. At this speed, the ISS is able to make one complete orbit around the Earth in about 90 minutes.
+
+    </p>
+    <div id="map">{{ map|safe }}</div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.js" 
+      #https://cdnjs.com/libraries/leaflet
+      integrity="sha512-Io0KK/1GsMMQ8Vpa7kIJjgvOcDSwIqYuigJEYxrrObhsV4j+VTOQvxImACNJT5r9O4n+u9/58h7WjSnT5eC4hA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <footer>
+      <p>Copyright © 2023 Aayush Bhattarai All Right Reseved<br>
+    </footer>
+  </body>
+</html>
+
